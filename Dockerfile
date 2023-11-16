@@ -12,6 +12,7 @@ RUN apt-get install -y nano vim
 RUN apt-get install -y stress
 RUN apt-get install -y lynx
 RUN apt-get install -y sysbench
+RUN apt-get install lftp
  
 USER 9001
 
