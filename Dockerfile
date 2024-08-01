@@ -1,11 +1,8 @@
 FROM ubuntu:22.04
 RUN apt-get update -y 
-RUN apt-get install -y netcat dnsutils curl telnet traceroute postgresql-client mysql-client ssh nano vim stress lynx sysbench lftp
-RUN chmod 775 /home
-RUN apt-get update && apt-get -y upgrade && \
-    apt-get -f -y install curl apt-transport-https lsb-release gnupg python3-pip ca-certificates && \
-    curl -LsS https://aka.ms/InstallAzureCLIDeb | bash && rm -rf /var/lib/apt/lists/* && \
-    apt-get update
+RUN apt-get install -y netcat dnsutils curl telnet traceroute postgresql-client mysql-client ssh nano vim stress lynx sysbench lftp pip3
+RUN pip3 install azure-cli
+RUN az extension add --name azure-devops
     
 USER 9001
 
