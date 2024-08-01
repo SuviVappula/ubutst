@@ -1,6 +1,6 @@
 FROM ubuntu:24.04
 RUN apt-get update -y 
-RUN apt-get install -y netcat dnsutils curl telnet traceroute postgresql-client mysql-client ssh nano vim stress lynx sysbench lftp
+RUN apt-get install -y dnsutils curl telnet traceroute postgresql-client mysql-client ssh nano vim stress lynx sysbench lftp
 RUN apt-get -f -y install curl apt-transport-https lsb-release gnupg python3-pip && \
     curl -sL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /etc/apt/trusted.gpg.d/microsoft.asc.gpg && \
     CLI_REPO=$(lsb_release -cs) && \
