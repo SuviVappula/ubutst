@@ -8,6 +8,8 @@ RUN apt-get -f -y install curl apt-transport-https lsb-release gnupg python3-pip
     > /etc/apt/sources.list.d/azure-cli.list && \
     apt-get update && \
     apt-get install -y azure-cli
+RUN mkdir /.azure
+RUN chmod 777 /.azure
     
 USER 9001
 
